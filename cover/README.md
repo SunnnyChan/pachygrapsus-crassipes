@@ -1,7 +1,7 @@
 # Pachygrapsus Crassipes
 
 
-![](_pic/pachygrapsus-crassipes.jpeg)  
+![](http://pic.yupoo.com/sunnnychan/44b55c45/01a3df80.jpeg)  
 
 粗腿厚纹蟹(学名:Pachygrapsus crassipes)，也称为条纹岸蟹，分布于北美洲、中美洲、韩国和日本的太平洋沿岸海滩。  
 这种甲壳类动物生活在岩石、潮汐 池和裂缝中，一生中有大约一半的时间在陆地上，但会定期返回到水中，以保持鳃的湿润。  
