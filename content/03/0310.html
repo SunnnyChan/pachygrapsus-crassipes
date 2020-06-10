@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>3.10 多臂老虎机算法 | Practical Statistics For Data Scientists</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.4.0">
+    
+    
+    <link rel="preload" href="/pachygrapsus-crassipes/assets/css/0.styles.a7f43921.css" as="style"><link rel="preload" href="/pachygrapsus-crassipes/assets/js/app.46ba7b70.js" as="script"><link rel="preload" href="/pachygrapsus-crassipes/assets/js/2.e15c1d5f.js" as="script"><link rel="preload" href="/pachygrapsus-crassipes/assets/js/27.66bc012e.js" as="script"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/10.c41cb2f6.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/11.518a09d2.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/12.fbd571a3.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/13.26590ea9.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/14.23c99481.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/15.1d1b0f58.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/16.c3288bbe.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/17.2d9250f7.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/18.0ba2a19f.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/19.ca53c35b.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/20.b4323985.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/21.4812917c.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/22.dab79e70.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/23.b1cd130c.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/24.378e2d22.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/25.f5b1741e.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/26.de07873d.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/28.9ede57b6.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/29.adf7ca87.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/3.1d40b5f1.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/30.1cb601a1.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/31.477c5c5e.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/32.4fb4a3a1.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/33.a6a15cc3.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/34.5777d836.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/35.64719835.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/36.460c4fdc.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/37.caade764.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/38.2ede932b.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/39.402948dc.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/4.ff5eda02.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/5.0aecd9bb.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/6.ec29b9af.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/7.7d20c928.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/8.daf92891.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/9.da495518.js">
+    <link rel="stylesheet" href="/pachygrapsus-crassipes/assets/css/0.styles.a7f43921.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/pachygrapsus-crassipes/" class="home-link router-link-active"><!----> <span class="site-name">Practical Statistics For Data Scientists</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="http://www.github.com/sunnnychan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="http://www.github.com/sunnnychan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pachygrapsus-crassipes/content/" class="sidebar-link">内容摘录</a></li><li><a href="/pachygrapsus-crassipes/r/" class="sidebar-link">R演示代码</a></li><li><a href="/pachygrapsus-crassipes/cover/" class="sidebar-link">封面说明</a></li><li><a href="/pachygrapsus-crassipes/author/" class="sidebar-link">作者简介</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_3-10-多臂老虎机算法"><a href="#_3-10-多臂老虎机算法" class="header-anchor">#</a> 3.10 多臂老虎机算法</h1> <p>多臂老虎机算法(multi-arm bandit algorithm)是一种检验方法，尤其适用于 Web 测试。<br>
+相比于传统的统计学实验设计方法，它实现了明显的优化，并且能<strong>更快地做出决策</strong>。</p> <ul><li>主要术语</li></ul> <p>多臂老虎机<br>
+一种假想的老虎机，提供多个拉杆供用户选择，每个拉杆对应不同的收益，用于模拟多处理实验。<br>
+臂<br>
+表示实验中的一个处理，例如 Web 测试中的标题 A。<br>
+获胜<br>
+通过实验模拟老虎机上的获胜，例如客户点击了链接。</p> <ul><li>传统 A/B 测试 问题</li></ul> <p>传统的 A/B 测试需要根据特定的设计在实验中采集数据，去回答某个具体的问题。<br>
+例如:
+“处理 A 和处理 B 哪个更好?”<br>
+假定一旦问题得到解答，就结束实验，然后继续操作结果。</p> <p>你可能已经发现，使用这一方法存在几个问题。</p> <p>首先，我们得到的答案并不是结论性的，即“效果未证明”。
+换句话说，实验结果可能会表明一个效果，但是我们没有足够的样本去证明所表明的效果，<br>
+也就无法确定效果是否符合传统的统计标准。这并未回答我们应该做出什么决策的问题。</p> <p>其次，我们可能希望在实验得出结论前，就开始利用之前获得的结果。</p> <p>再次，我们希望能根据实验结束后获得的其他数据，去更改我们的决策，或是尝试其他的事情。</p> <p>传统的实验方法和假设检验方法可以追溯至 20 世纪 20 年代，这些方法是相当僵化的。<br>
+随着具有强大计算能力的计算机和软件的出现，我们可以使用一些更强大、更灵活的方法。<br>
+此外，<strong>数据科学(包括商业)并不十分关注统计显著性，而是更加关注整体工作和结果的优化</strong>。</p> <ul><li>什么是多臂老虎机算法</li></ul> <p>多臂老虎机算法在 Web 测试中广受欢迎，它可以一次测试多个处理，相比于传统的统计设计，它能更快地得出结论。<br>
+该算法以赌博中使用的老虎机命名，也称“单臂老虎机”，因为该算法在配置上实现了稳定地从赌徒那里掠取金钱。<br>
+让我们想象一台有多个拉杆的老虎机，每个拉杆以不同的速率付款，这就是一个多臂老虎机，即该算法全称的由来。</p> <p>我们的目标是尽可能赢取更多的钱，具体地说，越早识别并确定可以获胜的拉杆越好。<br>
+但是挑战在于，我们并不知道各个老虎机拉杆的回报速率，只知道拉动老虎机拉杆的结果。<br>
+我们假设无论拉的是哪个拉杆，每次“获胜”将得到相同数额的回报，不同之处只在于获胜的概率。<br>
+进一步假设，我们初始尝试拉动每个拉杆 50 次，得到以下结果。</p> <p>• 拉杆 A:拉动 50 次，获胜 10 次。<br>
+• 拉杆B:拉动50次，获胜2次。<br>
+• 拉杆C:拉动50次，获胜4次。</p> <p>一种极端的做法是：<br>
+拉杆 A 看起来像是赢家，因此让我们放弃尝试拉动其他的拉杆，一直拉动拉杆 A。该做法充分利用了初始试验的结果。
+如果拉杆 A 的确更优，我们就可以 尽早从中受益。<br>
+但另一方面，如果拉杆 B 和拉杆 C 事实上更好，那么我们就会失去发现这一点的偶然性。</p> <p>另一种极端的做法是:<br>
+这看上去完全在随机范围内，让我们继续以均等的可能性拉动各个拉杆。<br>
+这一做法将给予拉杆 A 的替代者们一个充分展示的偶然性，但是在此过程中，我们的处理看上去并非最优。</p> <p>问题在于这一做法将持续多长时间? 老虎机算法采用了一种混合的方法。</p> <p>一开始，我们更频繁地拉动拉杆 A，充分利用该拉杆初始看上去更优的结果。<br>
+但我们并未放弃拉杆 B 和拉杆 C，只是较少地拉动它们。
+如果拉杆 A 持续表现优异，我们将继续少拉动拉杆 B 和拉杆 C，而是更频繁地拉动拉杆 A。<br>
+而如果拉杆 C 的表现开始变好，拉杆 A 的结果开始变糟，这时我们可以减少拉动拉杆 A 的次数，转而频繁地拉动拉杆 C。<br>
+如果其中一个拉杆被证明是优于拉杆 A 的，只是由于随机性导致它未在初始试验中显现出来，那么现在就有偶然性在进一步的检验中得以显现。</p> <ul><li>Web 测试</li></ul> <p>现在，我们考虑将算法应用于 Web 测试，这回测试的不再是多个老虎机拉杆，而是多个要在 Web 网站上测试的报价、标题、颜色等。<br>
+用户可以点击(即商家的“获胜”)，也可以不点击。</p> <p>初始，各个报价的展示是随机且平等的。随着测试的开展，如果一个报价开始优于其他报价，那么可以更频繁地显示该报价(即“拉动拉杆”)。</p> <p>但问题是，应该如何确定修改拉动速率的算法的参数? 拉动拉杆的速率”应该改成多少? 何时改变速率?</p> <p>下面给出了一个简单的算法，它被称为 <strong>A/B 测试的 ε-贪心算法</strong>。
+(1) 生成一个介于 0 和 1 之间的随机数。<br>
+(2) 如果随机数落在 0 和 ε 之间<br>
+其中，ε 是一个介于 0 和 1 之间的数字，通常非常小，则抛一次硬币(硬币是均匀的，即得到正反面的概率均为 50%)。<br>
+a. 如果硬币正面向上，显示报价 A。<br>
+b. 如果硬币反面向上，显示报价B。<br>
+(3) 如果随机数大于或等于 ε，显示迄今为止具有最高响应率的报价。</p> <p>ε 是控制该算法的唯一参数<br>
+如果 ε = 1，最终得到的是一个标准的简单 A/B 测试，每个实 验对象在处理 A 和处理 B 之间随机分配。<br>
+如果 ε = 0，最终得到一个纯粹的贪心算法，贪心算法无须做进一步的实验，将实验对象(Web 访问者)分配给表现最好的处理即可。</p> <ul><li>汤普森抽样(Thompson’s sampling)方法</li></ul> <p>一个更复杂的算法，我们可以在每个阶段 中做一次“抽样”(拉动拉杆)，以最大化选择最佳拉杆的可能性。
+当然，我们并不知道哪个拉杆是最佳的，而问题完全在于此!</p> <p>但是随着每一次连续的抽取，我们都能获得收益，进而获得更多的信息。</p> <p>汤普森抽样采用了贝叶斯方法，它首先使用 Beta 分布假设回报的先验分布，Beta 分布常用于指定贝叶斯问题中的先验情况。<br>
+随着每次抽取信息的累积，通过更新累积信息，我们就可以更好地优化下一次抽取，直至选取最优的拉杆。</p> <p>老虎机算法可以有效地应对三种以上的处理，并趋向于最佳选择的方向。
+对于传统的统计检验过程而言，三种以上处理决策的复杂性，远远超出了传统的 A/B 测试，因此老虎机算法颇具优势。</p> <h2 id="本节要点"><a href="#本节要点" class="header-anchor">#</a> 本节要点</h2> <ol><li>传统的 A/B 测试基于随机抽样过程，会导致过度地使用非最优处理。</li> <li>相比而言，多臂老虎机算法改进了抽样过程，加入了在实验过程中学到的信息，减少了非最优处理的频数。</li> <li>多臂老虎机算法还有助于有效地应对两种以上的处理。</li> <li>多臂老虎机具有多种不同的算法，能够解决如何将抽样概率从非最优处理转移到(假设的)最优处理的问题。</li></ol></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/pachygrapsus-crassipes/assets/js/app.46ba7b70.js" defer></script><script src="/pachygrapsus-crassipes/assets/js/2.e15c1d5f.js" defer></script><script src="/pachygrapsus-crassipes/assets/js/27.66bc012e.js" defer></script>
+  </body>
+</html>

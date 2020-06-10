@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>A/B测试 | Practical Statistics For Data Scientists</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.4.0">
+    
+    
+    <link rel="preload" href="/pachygrapsus-crassipes/assets/css/0.styles.a7f43921.css" as="style"><link rel="preload" href="/pachygrapsus-crassipes/assets/js/app.46ba7b70.js" as="script"><link rel="preload" href="/pachygrapsus-crassipes/assets/js/2.e15c1d5f.js" as="script"><link rel="preload" href="/pachygrapsus-crassipes/assets/js/4.ff5eda02.js" as="script"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/10.c41cb2f6.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/11.518a09d2.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/12.fbd571a3.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/13.26590ea9.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/14.23c99481.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/15.1d1b0f58.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/16.c3288bbe.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/17.2d9250f7.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/18.0ba2a19f.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/19.ca53c35b.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/20.b4323985.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/21.4812917c.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/22.dab79e70.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/23.b1cd130c.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/24.378e2d22.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/25.f5b1741e.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/26.de07873d.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/27.66bc012e.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/28.9ede57b6.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/29.adf7ca87.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/3.1d40b5f1.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/30.1cb601a1.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/31.477c5c5e.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/32.4fb4a3a1.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/33.a6a15cc3.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/34.5777d836.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/35.64719835.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/36.460c4fdc.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/37.caade764.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/38.2ede932b.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/39.402948dc.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/5.0aecd9bb.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/6.ec29b9af.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/7.7d20c928.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/8.daf92891.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/9.da495518.js">
+    <link rel="stylesheet" href="/pachygrapsus-crassipes/assets/css/0.styles.a7f43921.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/pachygrapsus-crassipes/" class="home-link router-link-active"><!----> <span class="site-name">Practical Statistics For Data Scientists</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="http://www.github.com/sunnnychan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="http://www.github.com/sunnnychan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pachygrapsus-crassipes/content/" class="sidebar-link">内容摘录</a></li><li><a href="/pachygrapsus-crassipes/r/" class="sidebar-link">R演示代码</a></li><li><a href="/pachygrapsus-crassipes/cover/" class="sidebar-link">封面说明</a></li><li><a href="/pachygrapsus-crassipes/author/" class="sidebar-link">作者简介</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="a-b测试"><a href="#a-b测试" class="header-anchor">#</a> A/B测试</h1> <p>将实验分成两个组开展，在两组中，一般会有一组采用现有的标准处理，或者是不执行任何处理，称为对照组，而另一组称为实验组。<br>
+实验中的一个典型假设是实验组要优于对照组。</p> <ul><li>主要术语</li></ul> <p>处理 ：实验对象所接触的东西，例如药品、价格、Web 标题等。
+实验组 ： 执行特定处理的一组对象。
+对照组 ： 执行标准处理或不执行处理的一组对象。
+随机化 ： 随机地分配实验对象以进行处理的过程。
+实验对象 ： 接受处理者，例如 Web 访问者、病人等。
+检验统计量 ： 用于检验处理效果的度量。</p> <ul><li>应用场景</li></ul> <p>A/B 测试的结果易于测量，因此被广泛地用于 Web 设计和营销中</p> <p>测试两种土壤处理，以确定哪种土壤更适合育种<br>
+测试两种疗法，以确定哪种疗法对于抑制癌症更有效<br>
+测试两种价格，以确定哪种价格的净利润更高<br>
+测试两个 Web 标题，以确定哪个标题会带来更多的点击量<br>
+测试两条网络广告，以确定哪条广告能转化为更多的购买行为</p> <ul><li>实验对象</li></ul> <p>对象会分配给两组处理中的一组，对象可能是一个人、一种植物种子 或一位 Web 访问者。<br>
+在理想情况下，对象是随机指定(即随机分配)给一组处理的，这样，两个实验组之间的任何差异，只可能是由下面两个因素所导致的。</p> <ol><li>不同处理的效果</li> <li>将对象分配到不同处理过程中的运气因素
+一些对象的效果本来就很好，而随机分配可能会导致效果好的对象集中在处理 A 或处理 B 中。</li></ol> <ul><li>检验统计量</li></ul> <p>在 A/B 测试中，我们也需要关注比较 A 组和 B 组使用的检验统计量(即度量)。<br>
+在数据科学中，最常用的度量可能是<strong>二元变量</strong>，<br>
+例如点击或未点击，购买或不购买，作弊或未作弊，等等。</p> <p>在比较中所使用的度量，可以是连续变量(例如购买数量、利润等)，<br>
+也可以是计数(例 如住院天数、访问的页面数量)，两者的结果显示存在着差异。</p> <ul><li>表3-1:电子商务实验结果的2×2表格</li></ul> <table><tr><th>结果</th> <th>价格A</th> <th>价格B</th></tr> <tr><th>点击转化为购买</th> <td>200</td> <td>182</td></tr> <tr><th>点击未转化为购买</th> <td>23 539</td> <td>22 406</td></tr></table> <p>这是一个价格测试的结果。</p> <p>在比较中所使用的度量，可以是连续变量(例如购买数量、利润等)，也可以是计数(例如住院天数、访问的页面数量)。<br>
+两者的结果显示存在着差异。<br>
+如果关注的并非点击广告的转化情况，而是每次页面浏览的收益情况，那么在常见的软件输出中，表 3-1 的价格测试结果大致如下：</p> <p>Revenue/page-view with price A: mean = 3.87, SD = 51.10
+Revenue/page-view with price B: mean = 4.11, SD = 62.98</p> <p>SD 表示的是各组中值的标准偏差。</p> <p>注意：<br>
+些统计软件(包括 R 在内)会默认生成输出，但不能因此认为所有的输 出信息都是有用的，或是与结果相关的。</p> <p>我们可以看到，上面给出的标准偏 差就并非十分有用。<br>
+它们表明数据中可能存在大量的负值，但我们知道，收入值是不可能为负的。<br>
+这是由于数据集由少量较大的值(表示点击转化为购买)以及大量的零值(表示点击未转化为购买)组成。</p> <p>此类数据的变异性很 难用单个数字总结。<br>
+相对于标准偏差而言，更合理的度量是偏离均值的绝对偏差均值(A 组是 7.68，B 组是 8.15)。</p> <h2 id="_3-1-1-为什么要有对照组"><a href="#_3-1-1-为什么要有对照组" class="header-anchor">#</a> 3.1.1 为什么要有对照组</h2> <p>因为，如果没有对照组，就不能确保“其他条件均一样”，也不能确保所有差异的确是由处理（注：应该理解为人为产生的变化）还是偶然导致的，<br>
+除了处理，对照组与处理组具有相同的条件。</p> <p>如果我们只对比“基线”或先前的经验，那么除了处理，可能还有其他一些因素存在差异。</p> <ul><li>单盲研究和双盲研究</li></ul> <p>在单盲研究中，实验对象本身并不知道自己接受的是处理 A 还是处理 B，如果对象知道自身所接受的处理，那么会对响应产生影响。<br>
+双盲研究是指研究者和协助者，(例如医学研究中的医生和护士)，都不知道哪个对象接受了哪种处理。</p> <p>如果处理是公开透明的，则盲测是不可行的，例如电脑与心理学家间的认知疗法。</p> <p><strong>如何遵守随机化的原则？</strong></p> <p>在标准的 A/B 测试中，需要预先确定一个度量，<br>
+如果希望实验能在处理 A 和处理 B 这两者之间做出一个决策，那么就需要预先确立一个度量，即检验统计量。</p> <p>如果在实验开展后再去选择某个检验统计量，这无疑会引入研究人员的一些偏好。</p> <h2 id="_3-1-2-为什么只有处理a和b，没有c、d"><a href="#_3-1-2-为什么只有处理a和b，没有c、d" class="header-anchor">#</a> 3.1.2 为什么只有处理A和B，没有C、D......</h2> <p>传统的统计实验设计关注的是如何回答有关具体处理的效果的静态问题，对于下面列出的两个问题，数据科学家更关注的是问题2。</p> <p>问题 1: 价格 A 和价格 B 之间的差异是否是统计显著的?<br>
+问题 2: 在多种可能的价格中，哪种价格最好?</p> <p>鉴于此，数据科学家采用的是一种相对新颖的实验设计方法，即多臂老虎机算法。</p> <ul><li>获得实验许可</li></ul> <p>2014 年，Facebook 就在这个普遍接受的问题上碰了壁，该公司当时开展了 一项有关用户新闻推送中的情感影响的实验。</p> <ul><li>本节要点</li></ul> <ol><li>将实验对象分配给两组或更多组，各组的条件完全相同，只是要接受的处理不同。</li> <li>在理想情况下，实验对象是随机分配给各组的。</li></ol> <h2 id="_3-1-3-拓展阅读"><a href="#_3-1-3-拓展阅读" class="header-anchor">#</a> 3.1.3 拓展阅读</h2> <ol><li><p>Peter Bruce 撰写的 Introductory Statistics and Analytics: A Resampling Perspective，<br>
+重介绍了如何在数据科学场景中 使用 A/B 测试和重抽样。</p></li> <li><p>在 Web 测试中，测试的逻辑性和统计学方法同样具有挑战性，推荐从 Google Analytics 中关于实验的帮助章节入手。</p></li> <li><p>互联网上有大量的 A/B 测试指南，其中给出的建议须谨慎对待。<br>
+例如:  “等到大约有 1000 名访问者后，确保运行测试一周时间。”
+在统计学中，此类通用经验法则毫无意义。</p></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/pachygrapsus-crassipes/assets/js/app.46ba7b70.js" defer></script><script src="/pachygrapsus-crassipes/assets/js/2.e15c1d5f.js" defer></script><script src="/pachygrapsus-crassipes/assets/js/4.ff5eda02.js" defer></script>
+  </body>
+</html>

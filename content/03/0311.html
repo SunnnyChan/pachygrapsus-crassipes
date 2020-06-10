@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>3.11 检验效能和样本规模 | Practical Statistics For Data Scientists</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.4.0">
+    
+    
+    <link rel="preload" href="/pachygrapsus-crassipes/assets/css/0.styles.a7f43921.css" as="style"><link rel="preload" href="/pachygrapsus-crassipes/assets/js/app.46ba7b70.js" as="script"><link rel="preload" href="/pachygrapsus-crassipes/assets/js/2.e15c1d5f.js" as="script"><link rel="preload" href="/pachygrapsus-crassipes/assets/js/28.9ede57b6.js" as="script"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/10.c41cb2f6.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/11.518a09d2.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/12.fbd571a3.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/13.26590ea9.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/14.23c99481.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/15.1d1b0f58.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/16.c3288bbe.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/17.2d9250f7.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/18.0ba2a19f.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/19.ca53c35b.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/20.b4323985.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/21.4812917c.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/22.dab79e70.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/23.b1cd130c.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/24.378e2d22.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/25.f5b1741e.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/26.de07873d.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/27.66bc012e.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/29.adf7ca87.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/3.1d40b5f1.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/30.1cb601a1.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/31.477c5c5e.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/32.4fb4a3a1.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/33.a6a15cc3.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/34.5777d836.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/35.64719835.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/36.460c4fdc.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/37.caade764.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/38.2ede932b.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/39.402948dc.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/4.ff5eda02.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/5.0aecd9bb.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/6.ec29b9af.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/7.7d20c928.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/8.daf92891.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/9.da495518.js">
+    <link rel="stylesheet" href="/pachygrapsus-crassipes/assets/css/0.styles.a7f43921.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/pachygrapsus-crassipes/" class="home-link router-link-active"><!----> <span class="site-name">Practical Statistics For Data Scientists</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="http://www.github.com/sunnnychan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="http://www.github.com/sunnnychan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pachygrapsus-crassipes/content/" class="sidebar-link">内容摘录</a></li><li><a href="/pachygrapsus-crassipes/r/" class="sidebar-link">R演示代码</a></li><li><a href="/pachygrapsus-crassipes/cover/" class="sidebar-link">封面说明</a></li><li><a href="/pachygrapsus-crassipes/author/" class="sidebar-link">作者简介</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_3-11-检验效能和样本规模"><a href="#_3-11-检验效能和样本规模" class="header-anchor">#</a> 3.11 检验效能和样本规模</h1> <p>在开展 Web 测试时，如何确定测试时间(即每个处理需要显示多少次)?<br>
+测试时间主要取决于实现期望目标的频数。</p> <ul><li>主要术语</li></ul> <p>效果规模  在统计检验中，期望能检测到的效果的最小规模，例如点击率提高 20%。<br>
+检验效能  给定样本规模，检测到给定效果规模的概率。<br>
+显著性水平 在检验中所使用的统计显著性水平。</p> <h2 id="_3-11-1-样本规模"><a href="#_3-11-1-样本规模" class="header-anchor">#</a> 3.11.1 样本规模</h2> <h2 id="本节要点"><a href="#本节要点" class="header-anchor">#</a> 本节要点</h2> <p>在确定样本的规模之前，需提前确定要执行的统计检验。<br>
+必须指定要检测效果的最小规模。<br>
+还必须指定检测这一效果规模(检验效能)所需的概率。<br>
+最后，还必须指定执行检验的显著性水平(α 值)。</p> <h2 id="拓展阅读"><a href="#拓展阅读" class="header-anchor">#</a> 拓展阅读</h2> <p>在开展 Web 测试时，如何确定测试时间(即每个处理需要显示多少次)?<br>
+测试时间主要取决于实现期望目标的频数。</p> <ul><li>主要术语</li></ul> <p>效果规模<br>
+在统计检验中，期望能检测到的效果的最小规模，例如点击率提高 20%。<br>
+检验效能<br>
+给定样本规模，检测到给定效果规模的概率。<br>
+显著性水平<br>
+在检验中所使用的统计显著性水平。</p> <h2 id="_3-11-1-样本规模-2"><a href="#_3-11-1-样本规模-2" class="header-anchor">#</a> 3.11.1 样本规模</h2> <p>检验效能计算最常用于估计所需的样本规模。</p> <p>例如，假设我们要查看点击率的情况，即点击次数占展示次数的百分比，并检验已有广告与新广告之间的对比情况。<br>
+那么在此研究中，我们需要积累多少次点击?<br>
+如果我们只关注能显示出巨大差异的结果(例如，50% 的差异)，那么使用较小规模的样本就可以。</p> <p>另一方面，如果我们关注的是微小的差异情况，那么就需要规模更大的样本。<br>
+一种标准方法是制定一个策略，指定新广告必须比现有广告好百分之多少(例如 10%)，否则将保持现有的广告不变。<br>
+这个目标就称为<strong>效果规模</strong>，它决定了样本的规模。</p> <p>例如，假设当前的点击率约为 1.1%，而我们寻求 10% 的提升，即升至 1.21%。<br>
+因此我们构建两个箱子，箱子 A 中 1 占 1.1%(例如，箱子中有 110 个 1 和 9890 个 0)，<br>
+箱子 B 中 1 占 1.21%(例如，箱子中有 121 个 1 和 9879 个 0)。</p> <p>我们先尝试从每个箱子中做 300 次抽 取(对于广告而言，就是做 300 次“展示”)。<br>
+假设我们第一次抽取的结果如下：<br>
+• 箱子A:3个1<br>
+• 箱子B:5个1</p> <p>显而易见，任何假设检验都会认为这种差异(5 比 3)是在随机变异的范围之内。<br>
+但是要让任意假设检验都能可靠地展示出差异情况，这里使用的样本规模(每个组中 n = 300)和 效果规模(差异 10%)过小。</p> <p>现在，我们可以尝试增大样本规模(试试展示 2000 次)，并要求点击率提升更大的幅度 (例如，提升 30% 而不是 10%)。</p> <p>假设目前的点击率仍然是 1.1%，但我们现在它提升 50%，即提升到 1.65%。<br>
+我们构建两个箱子，箱子 A 中 1 依然占 1.1%(例如，110 个 1 和 9890 个 0)，<br>
+而箱子 B 中 1 占 1.65% (例如，165 个 1 和 9868 个 0)。<br>
+现在，我们尝试对每个箱子做 2000 次抽取。假设我们第一次抽取的结果如下。<br>
+• 箱子A:19个1<br>
+• 箱子B:34个1</p> <p>对该差异情况(34 比 19)的显著性检验表明，尽管它比前面给出的差异(5 比 3)更接近显著，但仍然是“不显著的”。<br>
+为了计算检验效能，我们需要多次重复上面的过程，或者 使用可以计算检验效能的统计软件。<br>
+但是我们的初始抽取表明，即便是要检测到 50% 的提升，广告也需要做上千次的展示。</p> <p>总之，在计算检验效能或所需的样本规模时，有四个成分是可替换的。<br>
+它们分别是:</p> <p>• <strong>样本规模</strong>
+• <strong>要检测的效果规模</strong>
+• <strong>执行检验的显著性水平，即 α 值</strong>
+• <strong>检验效能</strong></p> <p>如果指定了其中三个成分，那么就可计算得到第四个成分。最常见的情况是需要计算样本的规模，因此必须指定其他三个成分。<br>
+下面的 R 代码使用 pwr 软件包，给出了涉及两个成分的测试，其中两个样本的规模相同。</p> <div class="language-r extra-class"><pre class="language-r"><code>pwr.<span class="token number">2</span>p.test<span class="token punctuation">(</span>h <span class="token operator">=</span> <span class="token ellipsis">...</span><span class="token punctuation">,</span> n <span class="token operator">=</span> <span class="token ellipsis">...</span><span class="token punctuation">,</span> sig.level <span class="token operator">=</span> <span class="token ellipsis">...</span><span class="token punctuation">,</span> power <span class="token operator">=</span> <span class="token punctuation">)</span>
+h<span class="token operator">=</span> effect size <span class="token punctuation">(</span>as a proportion<span class="token punctuation">)</span>
+n <span class="token operator">=</span> sample size
+sig.level <span class="token operator">=</span> the significance level <span class="token punctuation">(</span>alpha<span class="token punctuation">)</span> at which the test will be conducted power <span class="token operator">=</span> power <span class="token punctuation">(</span>probability of detecting the effect size<span class="token punctuation">)</span>
+</code></pre></div><h2 id="本节要点-2"><a href="#本节要点-2" class="header-anchor">#</a> 本节要点</h2> <p>• 在确定样本的规模之前，需提前确定要执行的统计检验。<br>
+• 必须指定要检测效果的最小规模。<br>
+• 还必须指定检测这一效果规模(检验效能)所需的概率。<br>
+• 最后，还必须指定执行检验的显著性水平(α 值)。</p> <h2 id="拓展阅读-2"><a href="#拓展阅读-2" class="header-anchor">#</a> 拓展阅读</h2> <p>• Tom Ryan 撰写的 Sample Size Determination and Power 一书，对此问题做出了全面的综述，适合阅读。
+• 针对该问题，统计顾问 Steve Simon 以叙事风格撰写了一篇引人入胜的文章<br>
+“P. Mean: The first three steps in selecting an appropriate sample size”。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/pachygrapsus-crassipes/assets/js/app.46ba7b70.js" defer></script><script src="/pachygrapsus-crassipes/assets/js/2.e15c1d5f.js" defer></script><script src="/pachygrapsus-crassipes/assets/js/28.9ede57b6.js" defer></script>
+  </body>
+</html>

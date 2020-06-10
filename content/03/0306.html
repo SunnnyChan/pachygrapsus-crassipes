@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>3.6 多重检验 | Practical Statistics For Data Scientists</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.4.0">
+    
+    
+    <link rel="preload" href="/pachygrapsus-crassipes/assets/css/0.styles.a7f43921.css" as="style"><link rel="preload" href="/pachygrapsus-crassipes/assets/js/app.46ba7b70.js" as="script"><link rel="preload" href="/pachygrapsus-crassipes/assets/js/2.e15c1d5f.js" as="script"><link rel="preload" href="/pachygrapsus-crassipes/assets/js/23.b1cd130c.js" as="script"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/10.c41cb2f6.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/11.518a09d2.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/12.fbd571a3.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/13.26590ea9.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/14.23c99481.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/15.1d1b0f58.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/16.c3288bbe.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/17.2d9250f7.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/18.0ba2a19f.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/19.ca53c35b.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/20.b4323985.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/21.4812917c.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/22.dab79e70.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/24.378e2d22.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/25.f5b1741e.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/26.de07873d.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/27.66bc012e.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/28.9ede57b6.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/29.adf7ca87.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/3.1d40b5f1.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/30.1cb601a1.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/31.477c5c5e.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/32.4fb4a3a1.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/33.a6a15cc3.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/34.5777d836.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/35.64719835.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/36.460c4fdc.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/37.caade764.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/38.2ede932b.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/39.402948dc.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/4.ff5eda02.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/5.0aecd9bb.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/6.ec29b9af.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/7.7d20c928.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/8.daf92891.js"><link rel="prefetch" href="/pachygrapsus-crassipes/assets/js/9.da495518.js">
+    <link rel="stylesheet" href="/pachygrapsus-crassipes/assets/css/0.styles.a7f43921.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/pachygrapsus-crassipes/" class="home-link router-link-active"><!----> <span class="site-name">Practical Statistics For Data Scientists</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="http://www.github.com/sunnnychan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="http://www.github.com/sunnnychan" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pachygrapsus-crassipes/content/" class="sidebar-link">内容摘录</a></li><li><a href="/pachygrapsus-crassipes/r/" class="sidebar-link">R演示代码</a></li><li><a href="/pachygrapsus-crassipes/cover/" class="sidebar-link">封面说明</a></li><li><a href="/pachygrapsus-crassipes/author/" class="sidebar-link">作者简介</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_3-6-多重检验"><a href="#_3-6-多重检验" class="header-anchor">#</a> 3.6 多重检验</h1> <p>统计学中有一句话:“如果拷问数据的时间足够长，那么它迟早会 招供。”
+这意味着，如果我们能从足够多的视角去观察数据，并提出足够多的问题，几乎总是可以发现具有统计显著性的效果。</p> <ul><li>主要术语</li></ul> <p>第一类错误<br>
+错误地得出一个效果是统计显著的结论。<br>
+错误发现率<br>
+在多重检验中，犯第一类错误的比率。<br>
+p 值校正<br>
+用于在同一数据上做多重检验。<br>
+过拟合<br>
+拟合了噪声。</p> <ul><li>例如</li></ul> <p>给定随机生成的 20 个预测变量和一个结果变量，如果进行一组 20 次 α = 0.05 水平的显著性检验，<br>
+那么很可能至少有一个预测因子会(错误地)显示为统计显著的，这被称为第一类错误。</p> <p>在计算第一类错误的概率时，可以首先计算在 0.05 水平上所有预测因子将被正确检验为非统计显著的概率。</p> <p>在本例中，<br>
+一个预测因子被正确地检验为非统计显著的概率是 0.95，那么全部 20 个预测因子被正确地检验为非统计显著的概率，<br>
+就是 0.95×0.95×0.95×...，即0.95的20次方= 0.36。<br>
+至少一个预测因子将被错误地验证为显著的概率，就是 1 减去所有预测因子都是非统计显著的概率等于 0.64。</p> <p>上面介绍的问题涉及数据挖掘中的过拟合问题，即“模型拟合了噪声”。<br>
+如果我们添加的变量越多，或者运行的模型越多，那么偶然出现“统计显著性”的概率就会越大。</p> <p>在有监督学习任务中，会给出一个验证集，让模型评估从未见过的数据，从而降低了风险，<br>
+在没有已标记验证集的统计学习和机器学习任务中，仍然存在由统计噪声得出结论的风险。</p> <p>统计学提供了一些过程，可以在一些特定的场景下解决这个问题。
+例如，在比较多个处 理组的结果时，我们可以提出多个问题。<br>
+例如，<br>
+对于处理 A、B 和 C，我们可以提出如下问题：
+• A是否不同于B? • B是否不同于C? • A是否不同于C?</p> <p>另一个例子，<br>
+在临床试验中，我们可能想要在多个阶段查看某种治疗的效果。<br>
+在每个阶段，我们都可以提出多个问题，每个问题都会增加被随机性愚弄的可能性。<br>
+为了解决这一问题，统计学给出了一种**校正(adjustment)**过程。</p> <p>相比于单一假设检验所设置的统计显著性界限，<strong>校正过程设置了更严格的统计显著性界限</strong>。<br>
+校正过程通常涉及根据校正校正检验 的次数“划分 α 值”。<br>
+这导致了对每次检验使用较小的 α 值，即对于统计显著性更严格的界限。<br>
+Bonferroni 校正 就是这样的一种过程，它仅是将 α 值除以观测次数 n。</p> <p>然而，多重比较问题超出了上面列举的这些高度结构化的案例，它与反复 <strong>“数据疏浚” (dredging)现象</strong> 有关。<br>
+这一现象催生了“拷问数据”的谚语。<br>
+也就是说，<strong>给定一组足够复杂的数据，如果你没有从中找到感兴趣的内容，那么说明你根本就没有尽力去查看数据。</strong></p> <p>现在，可供使用的数据达到了前所未有的规模，在 2002 年至 2010 年期间，发表的论文数也近乎翻了一番。<br>
+这为在数据中发现有意义的内容提供了很多偶然性，其中包括下列多重性问题。</p> <div class="language-txt extra-class"><pre class="language-text"><code>如何两两成对地查看多个组间的差异情况
+对于以各种方式构建的数据子集，如何查看结果，例如，“我们并未在总体中发现显著的处理效果，但在 30 岁以下的未婚女性这一子集中，发现了显著的处理效果”。  
+如何尝试使用多种统计模型
+如何在模型中加入多个变量
+如何询问多个不同的问题，即不同的可能结果
+</code></pre></div><ul><li>错误发现率</li></ul> <p>错误发现率这一术语，最初用于描述一组给定的假设检验错误地识别显著效果的比率。
+随着基因组研究的发展，错误发现率变得愈发有用。</p> <p>在基因测序项目中，会进行大量的统计检验。<br>
+在这些情况中，错误发现率可以用在检验协议中，而单个错误“发现”是指假设检验的结果(例如，在两个样本之间)。</p> <p>研究人员也寻求通过设置检验过程的参数去控制一定水平的错误发现率。
+错误发现率也适用于数据挖掘的分类场景中，其中的错误发现是指对单个记录的错误标记，特别是将 0 误标记为 1(参见 5.4.2 节)。</p> <p>出于多种原因，尤其包括“多重性”这一常见问题，更多的研究并不一定意味着更好的研究。
+2011 年，拜耳制药公司试图对 67 项科学研究进行复现时，发现只能完全复现其中的 14 项。有近三分之二的研究根本无法复现。</p> <p>在任何情况下，针对高度定义和结构化的统计检验的校正过程过于特定，也不够灵活，因此通常并不适用于数据科学家。<br>
+就多重性问题而言，数据科学家的底线做法如下：</p> <ol><li>对于预测建模<br>
+可以通过交叉验证(参见 4.2.3 节)和使用验证集降低得到虚假模型的风险。<br>
+虚假模型的效能在很大程度上是随机性的结果。</li> <li>对于其他过程
+如果没有已标记的验证集可以验证模型，那么必须依赖如下原则。<br>
+应意识到对数据的查询和操作越多，随机性可能发挥的作用就更大。<br>
+使用重抽样和模拟等启发式方法，为随机性提供基准测试。这样就可以将观察到的结果与基准测试进行比较。</li></ol> <h2 id="本节要点"><a href="#本节要点" class="header-anchor">#</a> 本节要点</h2> <ol><li>在研究工作或数据挖掘项目中，多重性(多重比较、多变量、多模型等)增加了仅根据随机对某个结果得出显著性结论的风险。</li> <li>对于涉及多重统计比较的情况(即显著性的多重检验)，可以使用统计校正过程。</li> <li>在数据挖掘中使用结果变量带标记的验证样本，有助于避免得到误导性的结果。</li></ol> <h2 id="拓展阅读"><a href="#拓展阅读" class="header-anchor">#</a> 拓展阅读</h2> <ol><li>David Lane 的在线统计教程中简要介绍了如何使用 Dunnett 检验校正多重比较。</li> <li>Megan Goldman 对 Bonferroni 校 正 做 了 更 详 细 的 解 释，<br>
+参 见 http://www.stat.berkeley.edu/~mgoldman/Section0402.pdf。</li> <li>要深入了解如何使用更灵活的统计过程调整 p 值<br>
+推荐阅读 Peter Westfall 和 StanleyYoung 合著的 Resampling-Based Multiple Testing 一书。</li> <li>于数据分区和在预测建模中使用验证样本的讨论<br>
+请参阅 Galit Shmueli、Peter Bruce和 Nitin Patel 合著的 Data Mining for Business Analytics 一书的第 2 章。</li></ol></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/pachygrapsus-crassipes/assets/js/app.46ba7b70.js" defer></script><script src="/pachygrapsus-crassipes/assets/js/2.e15c1d5f.js" defer></script><script src="/pachygrapsus-crassipes/assets/js/23.b1cd130c.js" defer></script>
+  </body>
+</html>
