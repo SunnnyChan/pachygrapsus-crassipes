@@ -1,6 +1,6 @@
 // .vuepress/config.js
 module.exports = {
-  title: '冒号课堂',  // 设置网站标题
+  title: 'Practical Statistics For Data Scientists',  // 设置网站标题
   description : "",
   base : '/pachygrapsus-crassipes/',
   themeConfig: {
@@ -16,8 +16,8 @@ module.exports = {
         sidebarDepth: 1,    // 可选的, 默认值是 1
       },
       {
-        title: 'Python演示代码',   // 必要的
-        path: '/python/',      // 可选的
+        title: 'R演示代码',   // 必要的
+        path: '/r/',      // 可选的
         collapsable: false, // 可选的, 默认值是 true,
         sidebarDepth: 1,    // 可选的, 默认值是 1
       },
